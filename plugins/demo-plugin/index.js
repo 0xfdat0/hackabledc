@@ -2,8 +2,10 @@ module.exports.config = { // Plugin informations
     name: "Demo #1",
     id: "demo-plugin",
     description: "A simple plugin containing demo commands for the bot.",
+    defaultPermission: "everyone",
     version: "1.0.0",
-    author: "Blatoy"
+    author: "Blatoy",
+    onLoad: (apis) => {}
 };
 
 module.exports.commands = [{ // Commands list
