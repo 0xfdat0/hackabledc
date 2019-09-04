@@ -11,18 +11,18 @@ module.exports.config = { // Plugin informations
 module.exports.commands = [{ // Commands list
     trigger: "hello",
     help: "Reply in the channel: Hello World!",
-    args: [{
-        name: "text",
-        defaultValue: "Hello World!",
-        help: "Text to echo.",
-        allowsSpace: true
-    }],
     action: (message) => {
         message.reply("Hello World!"); // Send message to Discord
     }
 }, {
     trigger: "echo",
     help: "Echo what the user said",
+    args: [{
+        name: "text",
+        defaultValue: "Hello World!",
+        help: "Text to echo.",
+        allowsSpace: true
+    }],
     action: (message, args) => {
         message.channel.send(args.text);
     }
