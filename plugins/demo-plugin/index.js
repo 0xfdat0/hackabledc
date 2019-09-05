@@ -12,7 +12,7 @@ module.exports.commands = [{ // Commands list
     trigger: "hello",
     help: "Reply in the channel: Hello World!",
     action: (message) => {
-        message.reply("Hello World!"); // Send message to Discord
+        message.reply("Bienvenue à notre présentation"); // Send message to Discord
     }
 }, {
     trigger: "echo",
