@@ -28,7 +28,7 @@ module.exports.commands = [{ // Commands list
     }
 }, {
     trigger: "time",
-    help: "Display currnet time of the bot",
+        help: "Display current time of the bot",
     action: (message) => {
         let now = new Date();
         message.channel.send("It is now " + now.getHours() + ":" + ("00" + now.getMinutes()).slice(-2) + ".");
