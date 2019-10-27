@@ -5,14 +5,14 @@ module.exports.config = { // Plugin informations
     defaultPermission: "everyone",
     version: "1.0.0",
     author: "Blatoy",
-    onLoad: (apis) => {}
+    onLoad: (apis) => { }
 };
 
-module.exports.commands = [{ // Commands list
+module.exports.commands = [/*{ // Commands list
     trigger: "hello",
     help: "Reply in the channel: Hello World!",
     action: (message) => {
-        message.reply("Bienvenue à notre présentation"); // Send message to Discord
+        message.reply("Hello World!"); // Send message to Discord
     }
 }, {
     trigger: "echo",
@@ -26,11 +26,12 @@ module.exports.commands = [{ // Commands list
     action: (message, args) => {
         message.channel.send(args.text);
     }
-}, {
-    trigger: "time",
+}, */{
+        trigger: "time",
         help: "Display current time of the bot",
-    action: (message) => {
-        let now = new Date();
-        message.channel.send("It is now " + now.getHours() + ":" + ("00" + now.getMinutes()).slice(-2) + ".");
+        action: (message) => {
+            let now = new Date();
+            message.channel.send("It is now " + now.getHours() + ":" + ("00" + now.getMinutes()).slice(-2) + ".");
+        }
     }
-}];
+];
